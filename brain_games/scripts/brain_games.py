@@ -5,5 +5,10 @@ def start():
     return 'Welcome to the Brain Games!\n'
 
 
-print(start())
-print(welcome_user())
+def main():
+    print(start())
+    print(welcome_user())
+
+
+if __name__ == '__main__':
+    main()
