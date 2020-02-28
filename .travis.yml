@@ -1,5 +1,5 @@
 language: python
-python: 3.6
+python: 3.6.10
 
 before_install:
   # make depends on poetry
@@ -8,5 +8,5 @@ before_install:
 install:
   - make install
 
-lint:
+script:
   - make lint
