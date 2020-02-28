@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "primbayev_brain_games"
-version = "0.1.2"
+version = "0.1.3"
 description = ""
 authors = ["Aldiyar Primbayev <primbayev.96aldi@gmail.com>"]
 packages = [
