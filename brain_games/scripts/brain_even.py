@@ -1,5 +1,5 @@
-from brain_games.check_is_even import game_process, final_message
-from brain_games.cli import welcome_user
+from brain_games.games.brain_even_game import game_process
+from brain_games.cli import welcome_user, final_message
 
 
 def main():
