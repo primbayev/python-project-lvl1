@@ -30,6 +30,6 @@ def check_prime_number(number):
         if number % i == 0:
             counter += 1
 
-    if counter == 0 or number == 2:
+    if counter == 0 and number > 1:
         return 'yes'
     return 'no'
