@@ -35,5 +35,3 @@ def final_message(name, is_game_successful):
 def common_start():
     initial_welcome()
     answer_yes_or_no()
-    name = welcome_user()
-    return name

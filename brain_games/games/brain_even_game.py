@@ -1,10 +1,12 @@
 from brain_games import prompt_string, randrange
 from brain_games.games.brain_games_common import check_answer
-from brain_games.games.brain_games_common import final_message, common_start
+from brain_games.games.brain_games_common import welcome_user, final_message
+from brain_games.games.brain_games_common import common_start
 
 
 def game_process():
-    name = common_start()
+    common_start()
+    name = welcome_user()
 
     is_game_successful = True
     for i in range(0, 3):
