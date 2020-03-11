@@ -11,7 +11,7 @@ def welcome_user():
     return name
 
 
-def answer_yes_or_no():
+def anser_yes_or_no():
     print('Answer "yes" if given number is prime. Otherwise answer "no".\n')
 
 
