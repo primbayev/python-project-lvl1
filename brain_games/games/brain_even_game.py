@@ -1,12 +1,11 @@
 from brain_games import prompt_string, randrange
 from brain_games.games.brain_games_common import initial_welcome, check_answer
 from brain_games.games.brain_games_common import welcome_user, final_message
-from brain_games.games.brain_games_common import anser_yes_or_no
 
 
 def game_process():
     initial_welcome()
-    anser_yes_or_no()
+    print('Answer "yes" if number even otherwise answer "no".\n')
     name = welcome_user()
 
     is_game_successful = True
@@ -27,5 +26,5 @@ def game_process():
 
 def check_is_even(number):
     if number % 2 == 0:
-        return 'no'
-    return 'yes'
+        return 'yes'
+    return 'no'

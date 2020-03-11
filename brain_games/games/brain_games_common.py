@@ -11,10 +11,6 @@ def welcome_user():
     return name
 
 
-def anser_yes_or_no():
-    print('Answer "yes" if given number is prime. Otherwise answer "no".\n')
-
-
 def check_answer(user_answer, correct_answer):
     if user_answer != str(correct_answer):
         print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(
