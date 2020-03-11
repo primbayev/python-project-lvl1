@@ -1,12 +1,12 @@
 from brain_games import prompt_string, randrange
 from brain_games.games.brain_games_common import initial_welcome, check_answer
 from brain_games.games.brain_games_common import welcome_user, final_message
-from brain_games.games.brain_games_common import anser_yes_or_no
+from brain_games.games.brain_games_common import answer_yes_or_no
 
 
 def game_process():
     initial_welcome()
-    anser_yes_or_no()
+    answer_yes_or_no()
     name = welcome_user()
 
     is_game_successful = True
@@ -31,6 +31,6 @@ def check_prime_number(number):
         if number % i == 0:
             counter += 1
 
-    if counter == 0 or number == 2:
+    if counter == 0 and number > 1:
         return 'yes'
     return 'no'
