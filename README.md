@@ -20,4 +20,4 @@
 
 ## Brain prime
 
-[![asciicast](https://asciinema.org/a/309215.svg)](https://asciinema.org/a/309215)
+[![asciicast](https://asciinema.org/a/309516.svg)](https://asciinema.org/a/309516)
