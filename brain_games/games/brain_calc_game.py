@@ -8,7 +8,6 @@ def game_process():
     print('What is the result of the expression?\n')
     name = welcome_user()
 
-    is_game_successful = True
     operations = ('+', '-', '*')
     for i in range(0, 3):
         random_operation = operations[i]
@@ -28,7 +27,6 @@ def game_process():
 
         is_user_answer_correct = check_answer(user_answer, correct_answer)
         if not is_user_answer_correct:
-            is_game_successful = False
             break
 
-    final_message(name, is_game_successful)
+    final_message(name, is_user_answer_correct)

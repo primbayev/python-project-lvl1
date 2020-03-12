@@ -9,7 +9,6 @@ def game_process():
     print('Find the greatest common divisor of given numbers.\n')
     name = welcome_user()
 
-    is_game_successful = True
     for i in range(0, 3):
         first_number = randrange(0, 100)
         second_number = randrange(0, 100)
@@ -23,7 +22,6 @@ def game_process():
 
         is_user_answer_correct = check_answer(user_answer, correct_answer)
         if not is_user_answer_correct:
-            is_game_successful = False
             break
 
-    final_message(name, is_game_successful)
+    final_message(name, is_user_answer_correct)

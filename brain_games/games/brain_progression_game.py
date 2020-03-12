@@ -8,7 +8,6 @@ def game_process():
     print('What number is missing in the progression?\n')
     name = welcome_user()
 
-    is_game_successful = True
     for i in range(0, 3):
         progression = create_arithmetic_progression()
         masked_progression = mask_progression(progression)
@@ -21,10 +20,9 @@ def game_process():
 
         is_user_answer_correct = check_answer(user_answer, correct_answer)
         if not is_user_answer_correct:
-            is_game_successful = False
             break
 
-    final_message(name, is_game_successful)
+    final_message(name, is_user_answer_correct)
 
 
 def create_arithmetic_progression():

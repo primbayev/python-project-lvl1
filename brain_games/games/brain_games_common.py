@@ -21,8 +21,8 @@ def check_answer(user_answer, correct_answer):
     return user_answer == str(correct_answer)
 
 
-def final_message(name, is_game_successful):
-    if is_game_successful:
+def final_message(name, is_user_answer_correct):
+    if is_user_answer_correct:
         print('Congratulations, {}!'.format(name))
     else:
         print("Let's try again, {}!".format(name))

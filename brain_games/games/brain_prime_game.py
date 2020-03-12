@@ -8,7 +8,6 @@ def game_process():
     print('Answer "yes" if given number is prime. Otherwise answer "no".\n')
     name = welcome_user()
 
-    is_game_successful = True
     for i in range(0, 3):
         random_number = randrange(0, 100)
         print('Question: {}'.format(random_number))
@@ -18,10 +17,9 @@ def game_process():
 
         is_user_answer_correct = check_answer(user_answer, correct_answer)
         if not is_user_answer_correct:
-            is_game_successful = False
             break
 
-    final_message(name, is_game_successful)
+    final_message(name, is_user_answer_correct)
 
 
 def check_prime_number(number):
