@@ -1,8 +1,9 @@
-from brain_games.games.brain_calc_game import game_process
+from brain_games import engine
+from brain_games.games import calc
 
 
 def main():
-    game_process()
+    engine.run(calc)
 
 
 if __name__ == '__main__':
