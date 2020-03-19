@@ -15,13 +15,13 @@ def generate_round():
         )
     )
 
-    correct_answer = determine_correct_answer(
+    correct_answer = calculate_expression(
         first_number, second_number, random_operation
     )
     return correct_answer
 
 
-def determine_correct_answer(first_number, second_number, random_operation):
+def calculate_expression(first_number, second_number, random_operation):
     if random_operation == '*':
         return str(first_number * second_number)
     elif random_operation == '-':

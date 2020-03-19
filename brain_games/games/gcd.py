@@ -11,11 +11,11 @@ def generate_round():
         "Question: {} {}".format(first_number, second_number)
     )
 
-    correct_answer = determine_correct_answer(first_number, second_number)
+    correct_answer = find_gcd(first_number, second_number)
     return correct_answer
 
 
-def determine_correct_answer(first_number, second_number):
+def find_gcd(first_number, second_number):
     greatest_divisor = 1
     greatest_number = max(first_number, second_number)
 
