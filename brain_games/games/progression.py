@@ -31,5 +31,5 @@ def create_arithmetic_progression():
 
 def mask_progression(progression):
     masked_progression = progression.copy()
-    masked_progression[randrange(len(progression) - 1)] = '..'
+    masked_progression[randrange(len(progression))] = '..'
     return masked_progression
