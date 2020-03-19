@@ -18,6 +18,7 @@ It is standard welcome for all games. After standard welcome you will see
 rule of the game. In the case of **brain-even** it is:
 **Answer "yes" if number even otherwise answer "no".**
 After this message starts first round.
+In each round will appear random number. Your task is to type *yes* if number is even. Otherwise type *no*.
 
 [![asciicast](https://asciinema.org/a/50NLp1QcSPt6RK551uloIo760.svg)](https://asciinema.org/a/50NLp1QcSPt6RK551uloIo760)
 
@@ -30,6 +31,7 @@ To run **brain-calc** game. Type this command in the console:
 
 You will see standard welcome message, then the rule of the game
 **What is the result of the expression?**
+In each round will appear a random expression. Your task is calculate it and give correct result.
 
 [![asciicast](https://asciinema.org/a/kIASoqAk8QJjCzeuYzJOzv2xE.svg)](https://asciinema.org/a/kIASoqAk8QJjCzeuYzJOzv2xE)
 
@@ -42,6 +44,7 @@ To run **brain-gcd** game. Type this command in the console:
 
 You will see standard welcome message, then the rule of the game
 **Find the greatest common divisor of given numbers.**
+In each round will appear two random numbers. Your task is to give *greatest common divisor* for this numbers.
 
 [![asciicast](https://asciinema.org/a/309145.svg)](https://asciinema.org/a/309145)
 
@@ -54,6 +57,8 @@ To run **brain-progression** game. Type this command in the console:
 
 You will see standard welcome message, then the rule of the game
 **What number is missing in the progression?**
+In each round will appear random arithmetic progression with random missing element.
+Your task is to determine what number is missing.
 
 [![asciicast](https://asciinema.org/a/309190.svg)](https://asciinema.org/a/309190)
 
@@ -66,5 +71,7 @@ To run **brain-prime** game. Type this command in the console:
 
 You will see standard welcome message, then the rule of the game
 **Answer "yes" if given number is prime. Otherwise answer "no".**
+In each round will appear random number. Your task is to determin is it prime or not.
+Prime number is the number which has only two divisors: 1 and itself.
 
 [![asciicast](https://asciinema.org/a/309516.svg)](https://asciinema.org/a/309516)
