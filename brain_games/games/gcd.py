@@ -16,11 +16,9 @@ def generate_round():
 
 
 def find_gcd(first_number, second_number):
-    greatest_divisor = 1
-    greatest_number = max(first_number, second_number)
-
-    for divisor in range(1, greatest_number + 1):
-        if first_number % divisor == 0 and second_number % divisor == 0:
-            greatest_divisor = divisor
-
-    return str(greatest_divisor)
+    while first_number != second_number:
+        if first_number > second_number:
+            first_number -= second_number
+        elif second_number > first_number:
+            second_number -= first_number
+    return str(first_number)
