@@ -6,18 +6,23 @@ from operator import mul
 
 
 RULE = 'What is the result of the expression?\n'
+OPERATIONS = [('+', add), ('-', sub), ('*', mul)]
 
 
 def generate_round():
-    operations = [['+', add], ['-', sub], ['*', mul]]
-    random_operation = choice(operations)
+    symbol, operation = choice(OPERATIONS)
     first_number = randrange(30)
     second_number = randrange(30)
-    print(
-        "Question: {} {} {}".format(
-            first_number, random_operation[0], second_number
-        )
+    return (first_number, second_number, symbol, operation)
+
+
+def question_text(expressions_parts):
+    first_number, second_number, symbol, operation = expressions_parts
+    return 'Question: {} {} {}'.format(
+        first_number, symbol, second_number
     )
 
-    correct_answer = str(random_operation[1](first_number, second_number))
-    return correct_answer
+
+def correct_answer(expressions_parts):
+    first_number, second_number, symbol, operation = expressions_parts
+    return str(operation(first_number, second_number))

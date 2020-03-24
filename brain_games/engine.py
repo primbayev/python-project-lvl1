@@ -7,7 +7,10 @@ def run(game, rounds=3):
     user_name = welcome_user()
 
     for round in range(rounds):
-        correct_answer = game.generate_round()
+        questions_main_part = game.generate_round()
+        print(game.question_text(questions_main_part))
+
+        correct_answer = game.correct_answer(questions_main_part)
         user_answer = prompt_user_answer()
 
         if user_answer != correct_answer:

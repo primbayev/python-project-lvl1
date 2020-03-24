@@ -5,18 +5,19 @@ RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".\n'
 
 
 def generate_round():
-    random_number = randrange(0, 100)
-    print('Question: {}'.format(random_number))
-
-    return "yes" if is_prime(random_number) else "no"
+    return randrange(0, 100)
 
 
-def is_prime(number):
+def question_text(random_number):
+    return 'Question: {}'.format(random_number)
+
+
+def correct_answer(random_number):
     counter = 0
-    for i in range(2, number):
-        if number % i == 0:
+    for i in range(2, random_number):
+        if random_number % i == 0:
             counter += 1
 
-    if counter == 0 and number > 1:
-        return True
-    return False
+    if counter == 0 and random_number > 1:
+        return 'yes'
+    return 'no'
