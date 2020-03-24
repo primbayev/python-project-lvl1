@@ -1,12 +1,12 @@
 from brain_games.cli import WELCOME, welcome_user, prompt_user_answer
 
 
-def run(game):
+def run(game, rounds=3):
     print(WELCOME)
     print(game.RULE)
     user_name = welcome_user()
 
-    for round in range(3):
+    for round in range(rounds):
         correct_answer = game.generate_round()
         user_answer = prompt_user_answer()
 
@@ -18,6 +18,5 @@ def run(game):
             break
 
         print('Correct!')
-
-        if round == 2:
-            print('Congratulations, {}!'.format(user_name))
+    else:
+        print('Congratulations, {}!'.format(user_name))
