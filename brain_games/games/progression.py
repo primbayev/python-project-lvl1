@@ -1,35 +1,24 @@
 from random import randrange
+from random import choice
 
 
 RULE = 'What number is missing in the progression?\n'
 
 
 def generate_round():
-    progression = create_arithmetic_progression()
-    masked_progression = mask_progression(progression)
-
-    print('Question: ', end='')
-    print(*masked_progression)
-    correct_answer = list(set(progression) - set(masked_progression))[0]
-    return str(correct_answer)
-
-
-def create_arithmetic_progression():
     arithmetic_progression = []
     element = randrange(0, 8)
     difference = randrange(1, 11)
-
     counter = 0
+    question = ''
+
     while counter < 10:
-        new_element = element + difference
-        arithmetic_progression.append(new_element)
-        element = new_element
+        question = question + str(element) + ' '
+        arithmetic_progression.append(str(element))
+        element += difference
         counter += 1
 
-    return arithmetic_progression
+    masked_element = choice(arithmetic_progression)
+    print('Question: {}'.format(question.replace(masked_element, '..', 1)))
 
-
-def mask_progression(progression):
-    masked_progression = progression.copy()
-    masked_progression[randrange(len(progression))] = '..'
-    return masked_progression
+    return masked_element
