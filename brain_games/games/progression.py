@@ -16,18 +16,11 @@ def generate_round():
         element += difference
         counter += 1
 
-    masked_element = choice(progression_str.split(' ')[:-1])
-    return (progression_str, masked_element)
+    answer = choice(progression_str.split(' ')[:-1])
+    question = 'Question: {}'.format(
+        progression_str.replace(
+            answer, '..', 1
+        )
+    )
 
-
-def question_text(progression_and_masked_element):
-    progression_str, masked_element = progression_and_masked_element
-
-    return 'Question: {}'.format(progression_str.replace(
-        masked_element, '..', 1
-    ))
-
-
-def correct_answer(progression_and_masked_element):
-    progression_str, masked_element = progression_and_masked_element
-    return masked_element
+    return (question, answer)
